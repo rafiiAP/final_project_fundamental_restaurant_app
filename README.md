@@ -14,7 +14,7 @@ Dicoding submission 2 flutter fundamental.
 - flutter_rating_bar
 
 ![Screenshot 1](/assets/images/home.png)
-![Screenshot 2](/assets/images/search.png)
-![Screenshot 3](/assets/images/detail.png)
+![Screenshot 1](/assets/images/search.png)
+![Screenshot 1](/assets/images/detail.png)
 
 
