@@ -1,16 +1,20 @@
 # restaurant_app
 
-A new Flutter project.
+Dicoding submission 2 flutter fundamental.
 
-## Getting Started
+## Statemanagement
+- GetX
 
-This project is a starting point for a Flutter application.
+## Dependences
 
-A few resources to get you started if this is your first Flutter project:
+- google_fonts
+- get
+- http
+- provider
+- flutter_rating_bar
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![Screenshot 1](/assets/images/home.png)
+![Screenshot 2](/assets/images/search.png)
+![Screenshot 3](/assets/images/detail.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
