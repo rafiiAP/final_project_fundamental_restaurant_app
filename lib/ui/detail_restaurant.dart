@@ -11,11 +11,11 @@ import 'package:restaurant_app/get/detail_restaurant_get.dart';
 import 'package:restaurant_app/widgets/main_widget.dart';
 
 class DetailRestaurantPage extends StatelessWidget {
-  String id;
+  final String id;
   // DetailRestaurantPage({
   //   super.key,
   // });
-  DetailRestaurantPage({
+  const DetailRestaurantPage({
     super.key,
     required this.id,
   });
@@ -75,7 +75,7 @@ class DetailRestaurantPage extends StatelessWidget {
                             children: [
                               Icon(
                                 Icons.place,
-                                color: AppColorConfig.primary,
+                                color: AppColorConfig.green,
                                 size: 15,
                               ),
                               W.paddingHeight5(),
@@ -238,7 +238,7 @@ class DetailRestaurantPage extends StatelessWidget {
                                               borderRadius:
                                                   BorderRadius.circular(15),
                                               child: Image.asset(
-                                                imageFood,
+                                                imageDrink,
                                                 fit: BoxFit.fill,
                                                 width:
                                                     Get.mediaQuery.size.width,

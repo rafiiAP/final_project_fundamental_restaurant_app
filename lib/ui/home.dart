@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
 
 import 'package:restaurant_app/data/api/api_service.dart';
 import 'package:restaurant_app/data/model/restaurant_list_model.dart';
-import 'package:restaurant_app/get/detail_restaurant_get.dart';
+import 'package:restaurant_app/get/search_restaurant_get.dart';
 import 'package:restaurant_app/ui/detail_restaurant.dart';
 import 'package:restaurant_app/ui/search_restaurant.dart';
 import 'package:restaurant_app/widgets/main_widget.dart';
@@ -23,9 +22,11 @@ class HomePage extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              Get.to(SerachRestaurantPage());
+              Get.to(SerachRestaurantPage())!.then(
+                (value) => Get.delete<SerachRestaurantGetx>(),
+              );
             },
-            icon: Icon(Icons.search),
+            icon: const Icon(Icons.search),
           ),
         ],
       ),

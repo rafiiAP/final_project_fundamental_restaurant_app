@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../common/color.dart';
 import '../data/constants/enum.dart';
+import '../data/constants/image.dart';
 
 part 'text_widget.dart';
 part 'form_widget.dart';
@@ -15,6 +16,43 @@ class MainWidget with TextWidget, FormControlWidget {
   static final MainWidget _instance = MainWidget._internal();
   factory MainWidget() => _instance;
   MainWidget._internal();
+
+  msgNoConnection({
+    required dynamic Function()? onPressed,
+  }) {
+    Get.bottomSheet(
+      Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image.asset(
+              imgNoInternet,
+              width: 200,
+              height: 200,
+            ),
+            W.textBody(
+              cText: 'Opps,. koneksi internetmu tidak ada nih',
+              fontSize: 20,
+            ),
+            W.paddingHeight16(),
+            SizedBox(
+              width: double.infinity,
+              child: W.button(
+                onPressed: onPressed,
+                child: W.textBody(
+                  cText: 'Coba Lagi',
+                  textColor: AppColorConfig.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+      backgroundColor: AppColorConfig.white,
+    );
+  }
 
   Widget paddingHeight16() {
     return const SizedBox(
@@ -71,7 +109,7 @@ class MainWidget with TextWidget, FormControlWidget {
         backgroundColor: backgroundColor,
         padding: padding,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(50),
+          borderRadius: BorderRadius.circular(10),
         ),
       ),
       onPressed: onPressed,

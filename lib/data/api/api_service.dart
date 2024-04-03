@@ -13,11 +13,18 @@ class ApiService {
   static const String _baseUrl = 'https://restaurant-api.dicoding.dev';
 
   Future<ResponseListModel> getListRestaurant() async {
-    final response = await http.get(Uri.parse("$_baseUrl/list"));
-    if (response.statusCode == 200) {
-      return responseListModelFromJson(response.body);
-    } else {
-      throw Exception('Failed to load top headlines');
+    try {
+      final response = await http.get(Uri.parse("$_baseUrl/list"));
+      if (response.statusCode == 200) {
+        return responseListModelFromJson(response.body);
+      } else {
+        throw Exception('Failed to load top headlines');
+      }
+    } on TimeoutException {
+      Get.snackbar('Time out', 'Time out');
+      throw TimeoutException('Time Out');
+    } catch (e) {
+      throw Exception(e);
     }
   }
 
@@ -50,6 +57,17 @@ class ApiService {
     } on TimeoutException {
       Get.snackbar('Time out', 'Time out');
       throw TimeoutException('Time Out');
+    } catch (e) {
+      throw Exception(e);
+    }
+  }
+
+  Future<bool> checkConnection() async {
+    try {
+      final response = await http.get(Uri.parse('https://www.google.com'));
+      return response.statusCode == 200;
+    } catch (e) {
+      return false;
     }
   }
 }
