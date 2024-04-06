@@ -79,11 +79,11 @@ class RestaurantDetailModel {
         "city": city,
         "address": address,
         "pictureId": pictureId,
-        "categories": List<dynamic>.from(categories!.map((x) => x.toJson())),
-        "menus": menus!.toJson(),
+        // "categories": List<dynamic>.from(categories!.map((x) => x.toJson())),
+        // "menus": menus!.toJson(),
         "rating": rating,
-        "customerReviews":
-            List<dynamic>.from(customerReviews!.map((x) => x.toJson())),
+        // "customerReviews":
+        //     List<dynamic>.from(customerReviews!.map((x) => x.toJson())),
       };
 }
 
@@ -149,16 +149,20 @@ class Menus {
 
 class Drink {
   String name;
+  String? restaurantId;
 
   Drink({
     required this.name,
+    this.restaurantId, // Tambahkan restaurantId
   });
 
   factory Drink.fromJson(Map<String, dynamic> json) => Drink(
         name: json["name"],
+        restaurantId: json["restaurantId"], // Tambahkan restaurantId
       );
 
   Map<String, dynamic> toJson() => {
         "name": name,
+        "restaurantId": restaurantId,
       };
 }

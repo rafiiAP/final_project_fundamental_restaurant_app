@@ -53,8 +53,6 @@ class HomePage extends StatelessWidget {
                               ctrl.vaRestaurant.value[index];
                           return InkWell(
                             onTap: () {
-                              // Get.put(DetailGetx(id: restaurants.id));
-                              // Get.to(DetailRestaurantPage());
                               Get.to(DetailRestaurantPage(
                                 id: restaurants.id,
                               ));

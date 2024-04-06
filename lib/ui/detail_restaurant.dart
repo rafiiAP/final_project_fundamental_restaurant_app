@@ -1,5 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
 import 'package:restaurant_app/common/color.dart';
@@ -12,15 +14,11 @@ import 'package:restaurant_app/widgets/main_widget.dart';
 
 class DetailRestaurantPage extends StatelessWidget {
   final String id;
-  // DetailRestaurantPage({
-  //   super.key,
-  // });
+
   const DetailRestaurantPage({
     super.key,
     required this.id,
   });
-
-  // final DetailGetx ctrl = Get.find();
 
   @override
   Widget build(BuildContext context) {
@@ -56,6 +54,37 @@ class DetailRestaurantPage extends StatelessWidget {
                           fit: BoxFit.cover,
                           width: Get.mediaQuery.size.width,
                           height: Get.size.height / 3,
+                        ),
+                      ),
+                    ),
+                    Transform.translate(
+                      offset: const Offset(0, -22),
+                      child: Align(
+                        alignment: Alignment.topRight,
+                        child: Card(
+                          margin: const EdgeInsets.only(right: 32),
+                          shape: const CircleBorder(),
+                          child: Obx(
+                            () => ctrl.isFavorite.value
+                                ? IconButton(
+                                    onPressed: () {
+                                      ctrl.removeFavorite();
+                                    },
+                                    icon: Icon(
+                                      Icons.favorite,
+                                      color: AppColorConfig.deepCarminePink,
+                                    ),
+                                  )
+                                : IconButton(
+                                    onPressed: () {
+                                      ctrl.addFavorite();
+                                    },
+                                    icon: Icon(
+                                      Icons.favorite_border,
+                                      color: AppColorConfig.grey,
+                                    ),
+                                  ),
+                          ),
                         ),
                       ),
                     ),
