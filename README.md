@@ -12,6 +12,13 @@ Dicoding submission 2 flutter fundamental.
 - http
 - provider
 - flutter_rating_bar
+- sqflite
+- shared_preferences
+- flutter_local_notifications
+- android_alarm_manager_plus
+- rxdart
+- permission_handler
+- intl
 
 ![Screenshot 1](/assets/images/home.png)
 ![Screenshot 1](/assets/images/search.png)
