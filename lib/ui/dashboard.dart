@@ -25,6 +25,10 @@ class DashboardPage extends StatelessWidget {
               label: 'Favorite',
               icon: Icon(Icons.favorite),
             ),
+            BottomNavigationBarItem(
+              label: 'Setting',
+              icon: Icon(Icons.settings),
+            ),
           ],
         ),
       ),

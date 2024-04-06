@@ -3,8 +3,6 @@ import 'package:get/get.dart';
 import 'package:restaurant_app/data/api/api_service.dart';
 import 'package:restaurant_app/data/model/search_model.dart';
 
-import '../common/color.dart';
-import '../data/constants/image.dart';
 import '../widgets/main_widget.dart';
 
 class SerachRestaurantGetx extends GetxController {

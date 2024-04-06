@@ -10,6 +10,9 @@ import '../model/restaurant_detail_model.dart';
 String imageURL = 'https://restaurant-api.dicoding.dev/images/small/';
 
 class ApiService {
+  final http.Client? httpClient;
+
+  ApiService({this.httpClient});
   static const String _baseUrl = 'https://restaurant-api.dicoding.dev';
 
   Future<ResponseListModel> getListRestaurant() async {
