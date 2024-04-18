@@ -19,7 +19,8 @@ Dicoding final project flutter fundamental.
 - intl
 
 ![Screenshot 1](/assets/images/home.png)
-![Screenshot 1](/assets/images/search.png)
-![Screenshot 1](/assets/images/detail.png)
+![Screenshot 2](/assets/images/search.png)
+![Screenshot 3](/assets/images/detail.png)
+![Screenshot 4](/assets/images/favorite.png)
 
 
