@@ -1,6 +1,6 @@
 # restaurant_app
 
-Dicoding submission 2 flutter fundamental.
+Dicoding final project flutter fundamental.
 
 ## Statemanagement
 - GetX
@@ -8,9 +8,7 @@ Dicoding submission 2 flutter fundamental.
 ## Dependences
 
 - google_fonts
-- get
 - http
-- provider
 - flutter_rating_bar
 - sqflite
 - shared_preferences
